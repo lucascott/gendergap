@@ -27,7 +27,7 @@ let screenWidth = window.innerWidth,
   pointLineWidth = 2,
   radiusStrokeWidth = 3,
   disableTrnasitions = false,
-  transitionDuration = 1300,
+  transitionDuration = 2000,
   isLandscape = true;
 
 let tweening = 0; // Hack to track rotate tween end and tween zoom
@@ -54,7 +54,7 @@ setMargins();
 
 // Where we are launching the missiles from
 let focusPoint = [],
-  launchCountryCode = 408; // North Korea
+  launchCountryCode = 308; // North Korea
 
 // Setup where to inject our interactive code
 const placeholder = document.querySelector(

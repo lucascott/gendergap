@@ -1,0 +1,71 @@
+<head>
+<script type="text/javascript" src="http://mobile.abc.net.au/res/libraries/jquery/jquery-2.1.4.min.js"></script>
+
+<style type="text/css">
+
+	.cursor:after {
+	    content:" |";
+	    opacity: 0;
+	    animation: cursor 1s infinite;
+	    color: orange;
+	    font-weight: 5000;
+	}
+
+	@keyframes cursor {
+	    0% {
+	        opacity: 0;
+	    }
+	    40% {
+	        opacity: 0;
+	    }
+	    50% {
+	        opacity: 1;
+	    }
+	    90% {
+	        opacity: 1;
+	    }
+	    100% {
+	        opacity: 0;
+	    }
+	}
+
+</style>
+
+</head>
+<body>
+	<p id="a">Although <strong>we've</strong> come a long way addressing inequality between men and women, it still persists today.<br>The <strong>gender gap</strong> shows us how unequal access to opportunities maintains inequality between the sexes.</p>
+
+	<script>
+		function typeWriter(id,speed)
+		{
+			var str = $(id).html(),
+		    i = 0,
+		    isTag,
+		    text;
+
+		    $(id).addClass('cursor')
+
+			(function type() {
+			    text = str.slice(0, ++i);
+			    if (text === str) 
+			    {
+			    	setTimeout(function(){
+						$(id).removeClass('cursor');
+					},2000);
+			    	return;
+			    }
+
+			    $(id).html(text);
+
+			    var char = text.slice(-1);
+			    if( char === '<' ) isTag = true;
+			    if( char === '>' ) isTag = false;
+
+			    if (isTag) return type();
+			    setTimeout(type, speed);
+			}());
+		}
+
+		typeWriter("#a",10);
+	</script>
+</body>

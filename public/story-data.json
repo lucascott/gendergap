@@ -1,5 +1,16 @@
 {
-  "locations": [{
+  "locations": [
+    {
+      "id": "burundi",
+      "name": "Burundi",
+      "longlat": [30.05996704, -3.51616246]
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "longlat": [-114.8909968, 56.90394733]
+    },
+    {
       "id": "pyongyang",
       "name": "Pyongyang",
       "longlat": [125.7625, 39.0392]
