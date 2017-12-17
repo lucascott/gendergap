@@ -16,9 +16,24 @@
       "longlat": [-103.271484375, 39.7477426576]
     },
     {
-      "id": "syria",
-      "name": "Syria",
-      "longlat": [38.99681499999997, 34.80207499999999]
+      "id": "weu",
+      "name": "Western Europe",
+      "longlat": [2.4169921875, 45.386105001964815]
+    },
+    {
+      "id": "southasia",
+      "name": "South Asia",
+      "longlat": [101.9091796875, 15.351999949579424]
+    },
+    {
+      "id": "southamerica",
+      "name": "South America",
+      "longlat": [-64.995117, -34.539143]
+    },
+    {
+      "id": "northamerica",
+      "name": "North America",
+      "longlat": [-102.568359, 41.218333]
     },
     {
       "id": "pyongyang",
