@@ -4,12 +4,12 @@
 <style type="text/css">
 
 	.cursor:after {
-	    content:" |";
-	    opacity: 0;
-	    animation: cursor 1s infinite;
-	    color: orange;
-	    font-weight: 5000;
-	}
+        content:"|";
+        opacity: 0;
+        animation: cursor 1s infinite;
+        color: orange;
+        font-weight: 100;
+    }
 
 	@keyframes cursor {
 	    0% {
@@ -33,43 +33,117 @@
 
 </head>
 <body>
-	<p id="a">Although <strong>we've</strong> come a long way addressing inequality between men and women, it still persists today.<br>The <strong>gender gap</strong> shows us how unequal access to opportunities maintains inequality between the sexes.</p>
+	<p id="a">Although [123][432]. <br><strong>we've</strong> come [termo][bello] a way addressing inequality between men and women, it still persists today.<br>The <strong>gender gap</strong> shows us how unequal access to opportunities maintains inequality between the sexes.</p>
 	
-
-	<p id="b">asdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdasasdasdasdas</p>
-
 	<script>
-		function typeWriter(id,speed)
-		{
-			var str = $(id).html(),
-		    i = 0,
-		    isTag,
-		    text;
+		function typeWriter(id,speed,right)
+	    {
+	      var str = $(id).html(),
+	        i = 0,
+	        isTag,
+	        canc = false,
+	        canc_c = 0,
+	        canc_quanto = 0,
+	        speed_bk = speed,
+	        what_origin,
+	        what_replace,
+	        text;
 
-		    $(id).addClass('cursor');
+	        $(id).addClass('cursor');
 
-			(function type() {
-			    text = str.slice(0, ++i);
-			    if (text === str) 
-			    {
-			    	setTimeout(function(){
-						$(id).removeClass('cursor');
-					},2000);
-			    	return;
-			    }
+	      (function type() {
+	          if (right)
+	            text = str.slice(0, ++i);
+	          else
+	            text = str.slice(0, --i);
+	          if (text === str) 
+	          {
+	            $(id).html(text);
+	            /*
+	            setTimeout(function(){
+	              $(id).removeClass('cursor');
+	            },2000);
+	            */
+	            return;
+	          }
 
-			    $(id).html(text);
 
-			    var char = text.slice(-1);
-			    if( char === '<' ) isTag = true;
-			    if( char === '>' ) isTag = false;
+	          var char = text.slice(-1);
 
-			    if (isTag) return type();
-			    setTimeout(type, speed);
-			}());
-		}
+	          // aspetto
+	          if ( char === "{" )
+	          {
+	          	var next = str.indexOf("}",i);
+	          	var how_much = str.substr(i,next - i);
+	          	str = str.replace("{"+how_much+"}","");
+	          	text = str.slice(0, ++i);
+	          	speed_bk = speed;
+	          	speed = how_much;
 
-		typeWriter("#a",80);
-		typeWriter("#b",70);
+	          	setTimeout(function () {
+	          		speed = speed_bk;
+	          	},how_much);
+	          }
+	          // fine aspetto
+
+	          // elimino
+	          if ( char === '[' )
+	          {
+	          	var next = str.indexOf("]",i);
+	          	if (canc_c == 0)
+	          	{
+	          		what_origin = str.substr(i,next - i);
+	          		str = str.replace("[","").replace("]","");
+	          		text = str.slice(0, --i);
+	          	}
+	          	else if (canc_c == 1)
+	          	{
+	          		what_replace = str.substr(i,next - i);
+	          		str = str.replace("["+what_replace+"]","");
+	          		text = str.slice(0, --i);
+	          		right = false;
+	          		canc = true;
+
+	          		// spetta per far figo
+	          		speed = 500;
+	          		setTimeout(function () {
+		          		speed = 100;
+		          	},500);
+	          	}
+	          	canc_c += 1;
+	          }
+
+	          if (canc)
+	          {
+	          	canc_quanto += 1;
+	          	if (canc_quanto == (what_origin.length+2)) 
+	          	{
+	          		str = str.replace(what_origin,what_replace);
+	          		right = true;
+	          		canc = false,
+			        canc_c = 0;
+			        canc_quanto = 0;
+
+			        // spetta per far figo
+	          		speed = 500;
+	          		setTimeout(function () {
+		          		speed = speed_bk;
+		          	},500);
+	          	}
+	          }
+	          // fine elimino
+
+	          $(id).html(text);
+
+	          if( char === '<' ) isTag = true;
+	          if( char === '>' ) isTag = false;
+
+	          if (isTag) return type();
+
+	          setTimeout(type, Math.floor((Math.random() * speed) + ((speed/2)-10)));
+	      }());
+	    }
+
+		typeWriter("#a",80,true);
 	</script>
 </body>
