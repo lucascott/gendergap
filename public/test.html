@@ -33,7 +33,7 @@
 
 </head>
 <body>
-	<p id="a">  Let's <strong>twist</strong> this first. [Ok so what you see here is the situa][Bla bla bla, boring stuff.]</p>
+	<p id="a">  Let's <strong>twist</strong> this first. [great][exceptional]</p>
 	
 	<script>
 		function typeWriter(id,speed,right)
@@ -107,7 +107,10 @@
 	          		// spetta per far figo
 	          		speed = 500;
 	          		setTimeout(function () {
-		          		speed = 10;
+		          		if ((what_origin.length) > 5)
+		                  speed = 20;
+		                else
+		                  speed = 95;
 		          	},500);
 	          	}
 	          	canc_c += 1;

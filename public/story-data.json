@@ -36,6 +36,31 @@
       "longlat": [-102.568359, 41.218333]
     },
     {
+      "id": "iceland",
+      "name": "Iceland",
+      "longlat": [-19.020835000000034, 64.963051]
+    },
+    {
+      "id": "norway",
+      "name": "Norway",
+      "longlat": [8.46894599999996, 60.47202399999999]
+    },
+    {
+      "id": "finland",
+      "name": "Finland",
+      "longlat": [25.748151099999973, 61.92410999999999]
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "longlat": [14.3701171875, 57.41182751493406]
+    },
+    {
+      "id": "rwanda",
+      "name": "Rwanda",
+      "longlat": [32.6513671875, 1.2669853275115353]
+    },
+    {
       "id": "pyongyang",
       "name": "Pyongyang",
       "longlat": [125.7625, 39.0392]
