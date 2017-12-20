@@ -61,6 +61,21 @@
       "longlat": [32.6513671875, 1.2669853275115353]
     },
     {
+      "id": "uk",
+      "name": "United Kingdom",
+      "longlat": [-3.43597299999999, 55.378051]
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "longlat": [10.451526000000058, 51.165691]
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "longlat": [2.213749000000007, 46.227638]
+    },
+    {
       "id": "pyongyang",
       "name": "Pyongyang",
       "longlat": [125.7625, 39.0392]
