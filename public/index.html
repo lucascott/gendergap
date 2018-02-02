@@ -18,6 +18,7 @@
   <link rel="stylesheet" type="text/css" href="http://www.abc.net.au/res/bundles/2.0.5/styles/abc.bundle.2.0.5.min.css" media="screen, projection"/>
   <link rel="stylesheet" type="text/css" href="http://mobile.abc.net.au/res/sites/news/styles/min/abc.news.mobile.css?2017-09-04" media="all"/>
   <link rel="stylesheet" type="text/css" href="/cm/code/8886686/livefyre-fixes.css" media=""/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 
   <style type="text/css">
@@ -59,7 +60,52 @@
     body::before { display: none !important; }
     .Nav { display: none !important; }
 
-    [class*="u-richtext"] > * { font-family: 'Raleway' !important; }
+    [class*="u-richtext"] > * { font-family: 'Open Sans' !important; }
+    [class*="u-richtext"] > h1 { font-family: 'Raleway' !important; }
+
+    .App__root--1lw61 {
+      background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB) !important;
+      background-size: 400% 400% !important;
+      -webkit-animation: Gradient 15s ease infinite !important;
+      -moz-animation: Gradient 15s ease infinite !important;
+      animation: Gradient 15s ease infinite !important;
+    }
+
+    @-webkit-keyframes Gradient {
+      0% {
+        background-position: 0% 50% !important;
+      }
+      50% {
+        background-position: 100% 50% !important;
+      }
+      100% {
+        background-position: 0% 50% !important;
+      }
+    }
+
+    @-moz-keyframes Gradient {
+      0% {
+        background-position: 0% 50% !important;
+      }
+      50% {
+        background-position: 100% 50% !important;
+      }
+      100% {
+        background-position: 0% 50% !important;
+      }
+    }
+
+    @keyframes Gradient {
+      0% {
+        background-position: 0% 50% !important;
+      }
+      50% {
+        background-position: 100% 50% !important;
+      }
+      100% {
+        background-position: 0% 50% !important;
+      }
+    }
 
   </style>
 
