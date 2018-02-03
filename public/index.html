@@ -204,11 +204,12 @@ data-no-support-msg="true"
           if (text === str) 
           {
             $("#"+id).html(text);
-            /*
+            
             setTimeout(function(){
-              $(id).removeClass('cursor');
-            },2000);
-            */
+              $("#"+id).append(" ");
+              $("#"+id).removeClass('cursor');
+            },1500);
+            
             return;
           }
 
