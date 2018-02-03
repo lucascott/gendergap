@@ -68,7 +68,73 @@
       background-size: 400% 400% !important;
     }
 
+    .Header-content { display: none !important; }
+
+    .u-dropcap { display: none !important; }
+
+    body, html {
+      height: 100% !important;
     }
+
+    /* The hero image */
+    .hero-image {
+        /* The image used */
+        background-image: url("hero.jpg");
+
+        /* Set a specific height */
+        height: 90%;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* Place text in the middle of the image */
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: 'Open sans';
+        letter-spacing: 5px;
+    }
+
+    .bouncy {
+    animation: Weeeeeeeeeee 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes Weeeeeeeeeee {
+    0% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    11% {
+        transform: translate(0, -25px) scaleX(.8);
+        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+    }
+    20% {
+        transform: translate(0, 0px) scaleY(.8);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    28% {
+        transform: translate(0, -10px);
+        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+    }
+    36% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    100% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+}
+
+    
 
   </style>
 
@@ -81,6 +147,20 @@
 <!-- Start ABC Bundle Header 2.0.5 -->
 <nav id="abcHeader" class="global" style="display:none" role="navigation" aria-label="ABC Network Navigation" data-resourcebase="http://www.abc.net.au/res/bundles/2.0.5/" data-scriptsbase="http://www.abc.net.au/res/bundles/2.0.5/scripts/" data-version="2.0.5">
 </header>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 class="titolo">DISCOVER THE GENDER GAP</h1>
+    <br>
+    <br>
+    <br>
+    <div class="arrow bouncy">  
+            <svg height="25" width="50">
+                <polygon points="0,0 25,10 50,0 25,25" fill="rgba(255,255,255,.5)" stroke-width="0" stroke="rgba(255,255,255,.3)"/>
+            </svg>
+    </div>  
+  </div>
+</div> 
 
 <div class="content">
   <article>
