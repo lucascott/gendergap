@@ -64,7 +64,7 @@
     [class*="u-richtext"] > h1 { font-family: 'Raleway' !important;}
 
     .App__root--1lw61 {
-      background: linear-gradient(-45deg, #EE775260, #E73C7E60, #23A6D560, #23D5AB60) !important;
+      background: linear-gradient(-45deg, #EE775260, #E73C7E60, #00BCFF60, #2383D560) !important;
       background-size: 400% 400% !important;
     }
 
@@ -111,7 +111,63 @@
     }
 
     .subtitolo {
-      font-size:33px;
+      font-size:24px;
+      line-height:30px;
+    }
+
+    b {
+      font-size: 26px;
+    }
+
+    .arrows {
+      width: 60px;
+      height: 72px;
+      position: absolute;
+      left: 50%;
+      margin-left: -15px;
+    }
+
+    .arrows path {
+      stroke: #fff;
+      fill: transparent;
+      stroke-width: 1px;  
+      animation: arrow 2s infinite;
+      -webkit-animation: arrow 2s infinite; 
+    }
+
+    @keyframes arrow
+    {
+      0% {opacity:0}
+      40% {opacity:1}
+      80% {opacity:0}
+      100% {opacity:0}
+    }
+
+    @-webkit-keyframes arrow /*Safari and Chrome*/
+    {
+      0% {opacity:0}
+      40% {opacity:1}
+      80% {opacity:0}
+      100% {opacity:0}
+    }
+
+    .arrows path.a1 {
+      animation-delay:-1s;
+      -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+    }
+
+    .arrows path.a2 {
+      animation-delay:-0.5s;
+      -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+    }
+
+    .arrows path.a3 { 
+      animation-delay:0s;
+      -webkit-animation-delay:0s; /* Safari 和 Chrome */
+    }
+
+    [class*="u-richtext"] > .u-full {
+      margin-top:-23px !important;
     }
 }
 
@@ -136,7 +192,20 @@
     <h1 class="titolo" id="secondo">GENDERMAP</h1>
     <br>
     <hr>
-    <span class="subtitolo">Fasten your bla</span>
+    <span class="subtitolo">
+      Are you ready to <b>dive</b> into GenderMap? I <b>bet</b> that at the end you will <b>learn</b> many insights about <b>gender gap</b> all over the <b>world.</b>
+      <br>
+      <br>
+      Fasten your <b>seatbelts</b> and start <b>scrolling</b> the page, see you at the end of this <b>voyage!</b>
+      <br>
+      <br>
+      <br>
+      <svg class="arrows">
+        <path class="a1" d="M0 0 L15 16 L30 0"></path>
+        <path class="a2" d="M0 10 L15 26 L30 10"></path>
+        <path class="a3" d="M0 20 L15 36 L30 20"></path>
+      </svg>
+    </span>
     <br>
     <br>
   </div>
@@ -385,6 +454,9 @@ data-no-support-msg="true"
 
 
     $(".hero-image").css("height",window.innerHeight + "px");
+    $(window).on('resize', function(){
+      $(".hero-image").css("height",window.innerHeight + "px");
+    });
 
     
   </script>
