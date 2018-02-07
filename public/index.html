@@ -72,17 +72,13 @@
 
     .u-dropcap { display: none !important; }
 
-    body, html {
-      height: 100% !important;
-    }
-
     /* The hero image */
     .hero-image {
         /* The image used */
-        background-image: url("hero.jpg");
+        background-image: url("3.jpg");
 
         /* Set a specific height */
-        height: 90%;
+        height: 500px;
 
         /* Position and center the image to scale nicely on all screens */
         background-position: center;
@@ -100,37 +96,22 @@
         transform: translate(-50%, -50%);
         color: white;
         font-family: 'Open sans';
-        letter-spacing: 5px;
+        font-size:40px;
+        line-height: 18px;
     }
 
-    .bouncy {
-    animation: Weeeeeeeeeee 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+    #primo {
+      opacity: 0.4;
+      font-size: 80px;
+      letter-spacing: 25px;
+    }
 
-@keyframes Weeeeeeeeeee {
-    0% {
-        transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    #secondo {
+      letter-spacing: 28px;
     }
-    11% {
-        transform: translate(0, -25px) scaleX(.8);
-        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
-    }
-    20% {
-        transform: translate(0, 0px) scaleY(.8);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-    }
-    28% {
-        transform: translate(0, -10px);
-        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
-    }
-    36% {
-        transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-    }
-    100% {
-        transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+
+    .subtitolo {
+      font-size:33px;
     }
 }
 
@@ -150,15 +131,14 @@
 
 <div class="hero-image">
   <div class="hero-text">
-    <h1 class="titolo">DISCOVER THE GENDER GAP</h1>
+    <h1 class="titolo" id="primo">LEARN THE</h1>
+    <br>
+    <h1 class="titolo" id="secondo">GENDERMAP</h1>
+    <br>
+    <hr>
+    <span class="subtitolo">Fasten your bla</span>
     <br>
     <br>
-    <br>
-    <div class="arrow bouncy">  
-            <svg height="25" width="50">
-                <polygon points="0,0 25,10 50,0 25,25" fill="rgba(255,255,255,.5)" stroke-width="0" stroke="rgba(255,255,255,.3)"/>
-            </svg>
-    </div>  
   </div>
 </div> 
 
@@ -402,6 +382,9 @@ data-no-support-msg="true"
       bounds: 200,
       reappear: true
     });
+
+
+    $(".hero-image").css("height",window.innerHeight + "px");
 
     
   </script>
