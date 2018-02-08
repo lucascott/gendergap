@@ -1,0 +1,87 @@
+.shareglobe {
+  font-family: "Raleway";
+  text-align: center;
+  color: orange;
+  font-size: 28px;
+}
+
+.shareglobe a:visited {
+  color: orange !important;
+}
+
+.shareglobe {
+  position: relative;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -40px;
+  border-radius: 80px;
+}
+.shareglobe span {
+  width: 200px;
+  line-height: 80px;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+.shareglobe nav {
+  font-size: 0;
+}
+.shareglobe a {
+  line-height: 80px;
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #ffffff;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 -20px;
+  -webkit-box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.shareglobe a:nth-child(1) {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  margin-left: 0;
+}
+.shareglobe a:nth-child(1):hover {
+  background-color: #61c5ec;
+}
+.shareglobe a:nth-child(2):hover {
+  background-color: #3b5998;
+}
+.shareglobe a:nth-child(3):hover {
+  background-color: #ea4335;
+}
+.shareglobe a:nth-child(4) {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-right: 0;
+}
+.shareglobe a:nth-child(4):hover {
+  background-color: #000000;
+}
+.shareglobe:hover span, .shareglobe.hover span {
+  opacity: 0;
+}
+.shareglobe:hover a, .shareglobe.hover a {
+  border-radius: 50%;
+  margin: 0 10px;
+  color: orange;
+  font-size: 28px;
+}
+.shareglobe:hover a:hover, .shareglobe.hover a:hover {
+  color: #fff;
+}
+

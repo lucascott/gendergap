@@ -51,3 +51,16 @@ if (process.env.NODE_ENV === "development") {
     `[north-korea-missile-map] public path: ${__webpack_public_path__}`
   );
 }
+
+// Share Button
+
+// Force a hover to see the effect
+var shareglobe = document.querySelector('.shareglobe');
+
+setTimeout(function () {
+  shareglobe.classList.add("hover");
+}, 1000);
+
+setTimeout(function () {
+  shareglobe.classList.remove("hover");
+}, 3000);
