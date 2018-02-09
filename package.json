@@ -1,12 +1,9 @@
 {
-  "name": "north-korea-missile-map",
+  "name": "gendermap",
   "version": "1.0.2",
   "description": "A project generated from aunty's preact-app template.",
   "license": "MIT",
   "private": true,
-  "contributors": [
-    "Joshua Byrd <phocks@gmail.com>"
-  ],
   "aunty": "preact-app",
   "scripts": {
     "start": "aunty serve"

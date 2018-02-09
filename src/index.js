@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === "development") {
   require("preact/devtools");
 
   console.debug(
-    `[north-korea-missile-map] public path: ${__webpack_public_path__}`
+    `[gendermap] public path: ${__webpack_public_path__}`
   );
 }
 
