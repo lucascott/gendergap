@@ -5,8 +5,24 @@
   font-size: 28px;
 }
 
-.shareglobe a:visited {
+.shareglobe a, a:visited, a:hover, a:active {
   color: orange !important;
+}
+
+.fa.fa-twitter {
+    color: orange !important;
+}
+
+.fa.fa-facebook {
+    color: orange !important;
+}
+
+.fa.fa-google {
+    color: orange !important;
+}
+
+.fa.fa-envelope {
+    color: orange !important;
 }
 
 .shareglobe {
