@@ -116,6 +116,16 @@
       "longlat": [139.691706, 35.689487]
     },
     {
+      "id": "saudiarabia",
+      "name": "Saudi Arabia",
+      "longlat": [46.5423378, 24.7255553]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "longlat": [78.902202, 22.0499116]
+    },
+    {
       "id": "sinpo",
       "name": "Sinpo shipyard",
       "longlat": [128.183947, 40.036845]
